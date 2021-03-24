@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>alternate stylesheet一键换肤</title>
+    <link
+      rel="alternate stylesheet"
+      title="silver"
+      href="./changeSkinStyle2.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      title="modern"
+      href="./changeSkinStyle1.css"
+      type="text/css"
+      media="screen"
+    />
+  </head>
+  <body>
+    <div>hello</div>
+    <p>
+      <button data-theme="modern">pink</button>
+      <button data-theme="silver">blue</button>
+    </p>
+    <script>
+      let pBtn = document.querySelector('p');
+      // 利用事件代理机制能够提高性能
+      pBtn.addEventListener('click', el => {
+      // 将theme的值保存到dataset中
+        let theme = el.target.dataset.theme;
+        changeStyle(theme);
+      });
+      function changeStyle(t) {
+        var styles = document.querySelectorAll("link");
+        var styleLink = [...styles]
+        styleLink.forEach(function(item,index) {
+          item.disabled = true;
+          item.disabled = item.title != t;
+        });
+        return false;
+      }
+    </script>
+  </body>
+</html>

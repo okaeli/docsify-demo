@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NoNoのノート</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- 様式 -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"> -->
+  <style>
+    img[alt="logo"]{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'logo',
+      repo: '',
+      //themeColor: '#99442e',
+      logo: '/image/logo.jpg',
+      loadSidebar: true, // 侧边栏 _sidebar.md
+      autoHeader: true,
+      subMaxLevel: 3,
+      executeScript: true, // 执行文档里的 第一个script 标签里的脚本
+      loadNavbar: true,　// 导航栏 _navbar.md
+      mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏。
+      // notFoundPage: 'my404.md',
+      coverpage: true, // 封面图 _coverpage.md
+      //homepage: '/learn-html/01-认识Web和Web标准.md',　// 首页文件加载路径
+      // 分页导航
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      // 搜索模块
+      search: {
+        maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
+        paths: ['/',           // => /README.md
+        '/learn-html',        // => /learn-html
+        '/learn-css',         // => /learn-css
+        '/learn-javascript',  // => /learn-javascript
+        ],                    // or 'auto'，匹配文件路径
+        placeholder: 'Type to search',  // 搜索提示框文字， 支持本地化，例子在下面
+        // placeholder: {
+        //   '/zh-cn/': '搜索',
+        //   '/': 'Type to search'
+        // },
+        noData: 'No Results!',          // 找不到结果文字提示，支持本地化，例子在下面
+        // noData: {
+        //   '/zh-cn/': '找不到结果',
+        //   '/': 'No Results'
+        // },
+        depth: 2,                       // 搜索标题的最大程级, 1 - 6
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 引入搜索模块 -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <!-- 复制到剪贴板 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- 分页导航 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 如果页面上的脚本是外部脚本（通过src属性导入js文件），则需要此插件才能使其正常工作。 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+</body>
+</html>
