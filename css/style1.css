@@ -1,0 +1,104 @@
+img[alt="logo"]{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: transform 1s ease-out;
+}
+img[alt="logo"]:hover{
+  transform: scale(1.3) rotate(45deg);
+}
+.cover-main>img{
+  animation: rotation 2s linear infinite;
+  -moz-animation: rotation 2 linear infinite;
+  -webkit-animation: rotation 2s linear infinite;
+  -o-animation: rotation 2s linear infinite;
+}
+@-webkit-keyframes rotation{
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+  }
+article>div>p>a{
+  text-shadow:0 0 10px #e4cfd6;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 22px;
+  color:rgb(61, 155, 196) !important;
+}
+article>div>p>a:hover{
+  color: rgb(230, 119, 147) !important;
+  font-weight: bold;
+}
+#extend{
+  z-index: 1000;
+}
+.top{
+  width: 30px;
+  height: 30px;
+  background-color: #49b1f5;
+  position: fixed;
+  right: 0px;
+  bottom: 10%;
+  cursor: pointer;
+  display: none;
+  text-align: center;
+  z-index: 100;
+}
+.skin{
+  width: 30px;
+  height: 30px;
+  background-color: #49b1f5;
+  position: fixed;
+  right: 0px;
+  bottom: 14%;
+  cursor: pointer;
+  text-align: center;
+  z-index: 100;
+}
+.skinList{
+  display: none;
+  z-index: 100;
+}
+.skinList ul{
+  height: 120px;
+  position: fixed;
+  right: 0px;
+  bottom: 18%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  z-index: 200;
+}
+.skinList li{
+  height: 30px;
+  width: 30px;
+  bottom: 0;
+  position: relative;
+  margin-top: 0px;
+  background-color: #49b1f5;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  list-style: none;
+  color: snow;
+  z-index: 200;
+  border: 1px solid snow;
+}
+.top #topArrow{
+  height: 10px;
+  font-weight:bold;
+  font-size: 21px;
+  position: relative;
+  top:-1px;
+  color: snow;
+}
+.skin #skinTab{
+  height: 10px;
+  font-weight:bold;
+  font-size: 16px;
+  position: relative;
+  top:3px;
+  color: snow;
+}
+.top:hover{
+  background-color: rgb(245, 135, 71);
+}

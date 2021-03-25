@@ -7,20 +7,47 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <!-- 様式 -->
-  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"> -->
+  <link rel="stylesheet" title="vue" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" title="simple" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" title="buble" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">
+  <link rel="stylesheet" title="dark" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+
   <style>
-    img[alt="logo"]{
-      width: 100px;
-      height: 100px;
-      border-radius: 50%
-    }
+    @import url(css/style1.css);
   </style>
 </head>
 <body>
+  <div id="extend">
+    <div class="top">
+      <span title="Top" id="topArrow">⬆</span>
+    </div>
+    <div class="skin">
+      <span title="Skin" id="skinTab">❤</span>
+    </div>
+    <div class="skinList">
+      <ul class="ulList">
+        <li data-theme="dark">d</li>
+        <li data-theme="simple">s</li>
+        <li data-theme="buble">b</li>
+        <li data-theme="vue" style="background-color: rgb(245, 135, 71);">v</li>
+      </ul>
+    </div>
+  </div>
   <div id="app"></div>
+
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 引入搜索模块 -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <!-- 复制到剪贴板 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- 分页导航 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 如果页面上的脚本是外部脚本（通过src属性导入js文件），则需要此插件才能使其正常工作。 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <!-- 在 Github 上编辑 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+  <script src="js/extend1.js"></script>
   <script>
     window.$docsify = {
       name: 'logo',
@@ -28,14 +55,16 @@
       //themeColor: '#99442e',
       logo: '/image/logo.jpg',
       loadSidebar: true, // 侧边栏 _sidebar.md
-      autoHeader: true,
+      // autoHeader: true,
+      topMargin: 0, // default: 0 // 锚点对齐标题栏
       subMaxLevel: 3,
       executeScript: true, // 执行文档里的 第一个script 标签里的脚本
       loadNavbar: true,　// 导航栏 _navbar.md
       mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏。
       // notFoundPage: 'my404.md',
       coverpage: true, // 封面图 _coverpage.md
-      //homepage: '/learn-html/01-认识Web和Web标准.md',　// 首页文件加载路径
+      homepage: '/learn-html/01-认识Web和Web标准.md',　// 首页文件加载路径
+      // basePath: '/learn-html/',
       // 分页导航
       pagination: {
         previousText: '上一章节',
@@ -62,18 +91,13 @@
         //   '/': 'No Results'
         // },
         depth: 2,                       // 搜索标题的最大程级, 1 - 6
-      }
+      },
+      //  在 Github 上编辑
+      plugins: [
+        EditOnGithubPlugin.create('https://github.com/okaeli/docsify-demo/tree/master/', 'https://github.com/okaeli/docsify-demo/tree/master/', 'edit on git')
+      ]
     }
   </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- 引入搜索模块 -->
-  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
-  <!-- 复制到剪贴板 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <!-- 分页导航 -->
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <!-- 如果页面上的脚本是外部脚本（通过src属性导入js文件），则需要此插件才能使其正常工作。 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+
 </body>
 </html>
