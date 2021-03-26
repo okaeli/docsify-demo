@@ -37,8 +37,6 @@
 
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- 引入搜索模块 -->
-  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
   <!-- 复制到剪贴板 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <!-- 分页导航 -->
@@ -60,7 +58,7 @@
       subMaxLevel: 3,
       executeScript: true, // 执行文档里的 第一个script 标签里的脚本
       loadNavbar: true,　// 导航栏 _navbar.md
-      mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏。
+      // mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏。
       // notFoundPage: 'my404.md',
       coverpage: true, // 封面图 _coverpage.md
       homepage: '/learn-html/01-认识Web和Web标准.md',　// 首页文件加载路径
@@ -75,22 +73,23 @@
       // 搜索模块
       search: {
         maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
-        paths: ['/',           // => /README.md
-        '/learn-html',        // => /learn-html
-        '/learn-css',         // => /learn-css
-        '/learn-javascript',  // => /learn-javascript
-        ],                    // or 'auto'，匹配文件路径
-        placeholder: 'Type to search',  // 搜索提示框文字， 支持本地化，例子在下面
+        paths: 'auto',
+        // ['/',           // => /README.md
+        // '/learn-html',        // => /learn-html
+        // '/learn-css',         // => /learn-css
+        // '/learn-javascript',  // => /learn-javascript
+        // ],                    // or 'auto'，匹配文件路径
+        placeholder: '搜索......',  // 搜索提示框文字， 支持本地化，例子在下面
         // placeholder: {
         //   '/zh-cn/': '搜索',
         //   '/': 'Type to search'
         // },
-        noData: 'No Results!',          // 找不到结果文字提示，支持本地化，例子在下面
+        noData: '找不到结果!',          // 找不到结果文字提示，支持本地化，例子在下面
         // noData: {
         //   '/zh-cn/': '找不到结果',
         //   '/': 'No Results'
         // },
-        depth: 2,                       // 搜索标题的最大程级, 1 - 6
+        depth: 6,                       // 搜索标题的最大程级, 1 - 6
       },
       //  在 Github 上编辑
       plugins: [
@@ -98,6 +97,7 @@
       ]
     }
   </script>
-
+  <!-- 引入搜索模块 -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 </body>
 </html>
