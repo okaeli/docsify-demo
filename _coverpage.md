@@ -7,7 +7,7 @@
 <!-- [![stars](https://badgen.net/github/stars/Q-Angelo/Nodejs-Roadmap?icon=github&color=4ab8a1)](https://github.com/) [![forks](https://badgen.net/github/forks/Q-Angelo/Nodejs-Roadmap?icon=github&color=4ab8a1)](https://github.com/) -->
 
 [MyBlog](<https://onuonu.github.io/>)
-[开始阅读](/learn-html/01-认识Web和Web标准.md)
+[开始阅读](/learn-html/浏览器的介绍.md)
 
 <!-- 背景图片 -->
 <!-- ![](./image/bg.png) -->

@@ -1,5 +1,4 @@
-* [01-认识Web和Web标准](/learn-html/01-认识Web和Web标准.md)
-* [02-浏览器的介绍](/learn-html/02-浏览器的介绍.md)
+* [浏览器的介绍](/learn-html/浏览器的介绍.md)
 * [03-初识HTML](/learn-html/03-初识HTML.md)
 * [04-HTML标签：排版标签](/learn-html/04-HTML标签：排版标签.md)
 * [05-HTML标签：字体标签和超链接](/learn-html/05-HTML标签：字体标签和超链接.md)
