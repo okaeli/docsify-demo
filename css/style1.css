@@ -1,3 +1,6 @@
+input[type="search"]{
+  background-color:#e4cfd6;
+}
 img[alt="logo"]{
   width: 100px;
   height: 100px;
